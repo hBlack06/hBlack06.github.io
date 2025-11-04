@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 
   <!-- Font Awesome Kit -->
-  <script src="https://kit.fontawesome.com/52341f41c6.js" crossorigin="anonymous"></script>
+  <script src="https://kit.webawesome.com/d9a5afd707bf4b59.js" crossorigin="anonymous" defer></script>
+
 </head>
 
 <body>
@@ -16,7 +17,7 @@
   =============================== -->
   <header>
     <a href="index.html">
-      <img src="Images/HollyBlackLogo.png" alt="Holly Black Logo" />
+      <img src="images/HollyBlackLogo.png" alt="Holly Black Logo" />
     </a>
 
     <nav>
@@ -39,7 +40,7 @@
 
     <!-- Centered Headshot -->
     <div class="profile-image">
-      <img src="Images/CirlcleHeadshot.png" alt="Holly Black Headshot" />
+      <img src="images/CirlcleHeadshot.png" alt="Holly Black Headshot" />
     </div>
 
     <section>
@@ -50,22 +51,25 @@
       <p>Explore my site to learn more about my projects, resume, and contact information.</p>
     </section>
   </main>
+<!-- ===============================
+     FOOTER PLACEHOLDER
+=============================== -->
+<div id="footer-placeholder"></div>
 
-  <!-- ===============================
-       FOOTER PLACEHOLDER
-  =============================== -->
-  <div id="footer-placeholder"></div>
+<script>
+fetch("footer.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("footer-placeholder").innerHTML = data;
 
-  <!-- Load external footer -->
-  <script>
-    fetch("footer.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("footer-placeholder").innerHTML = data;
-      })
-      .catch(err => console.error("Error loading footer:", err));
-  </script>
+    // Re-run FontAwesome to render new icons
+    if (window.FontAwesome && FontAwesome.dom && FontAwesome.dom.watch) {
+      FontAwesome.dom.watch();
+    }
+  })
+  .catch(err => console.error("Error loading footer:", err));
+</script>
+
 </body>
 </html>
-
 

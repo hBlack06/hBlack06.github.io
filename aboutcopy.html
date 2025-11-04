@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holly Black – About</title>
+  <link rel="stylesheet" href="style.css" />
+ <!-- Font Awesome Kit -->                                               
+  <script src="https://kit.webawesome.com/d9a5afd707bf4b59.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <a href="index.html">
+      <img src="images/HollyBlackLogo.png" alt="Holly Black Logo" />
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+	<li><a href="impossible.html">Impossible List</a></li>
+	<li><a href="classes.html">Classes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About Me</h1>
+    <section>
+      <p>Hi! I’m <strong>Holly Black</strong> — a Cybersecurity major at High Point University, graduating in December 2025. I’m passionate about technology, problem solving, and innovation in digital security.</p>
+      
+      <p>My academic and professional experiences have given me hands-on knowledge in areas such as network defense, programming, ethical hacking, and digital forensics. I enjoy working on projects that combine creativity and technical skill to strengthen systems and protect information.</p>
+
+      <p>Outside of academics, I value collaboration, leadership, and continual learning. Whether it’s participating in cybersecurity competitions or exploring new hobbies, I’m always looking for ways to grow and contribute to the world.</p>
+    </section>
+  </main>
+  <!-- ===============================
+       FOOTER PLACEHOLDER
+  =============================== -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Load external footer -->
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      })
+      .catch(err => console.error("Error loading footer:", err));
+  </script>
+</body>
+</html>

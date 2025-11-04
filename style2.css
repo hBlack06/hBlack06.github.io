@@ -301,6 +301,7 @@ footer h4 {
   color: #03045E !important;
 }
 
+
 /* ========== RESUME PAGE STYLING ========== */
 main iframe {
   width: 100%;
@@ -331,7 +332,7 @@ main iframe {
 
 /* ================================
    Course Table Styles
-================================ */
+   ================================ */
 .course-table {
   width: 100%;
   border-collapse: collapse;
@@ -406,7 +407,7 @@ main iframe {
 
 /* ================================
    Contact Form Styles
-================================ */
+   ================================ */
 .container {
   max-width: 900px;
   margin: 40px auto;
@@ -490,8 +491,129 @@ form button:hover {
 }
 
 /* ================================
-   About Page Layout (Cleaned)
+   About Page Layout
 ================================ */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.about-text {
+  flex: 1 1 500px;
+  max-width: 600px;
+}
+
+.about-image {
+  flex: 1 1 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border: 4px solid #B3D89C;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    max-width: 90%;
+  }
+
+  .about-image img {
+    max-width: 90%;
+  }
+}
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px 30px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+}
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.about-text h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+.about-container + .about-container {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 40px;
+}
+
+.about-images {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.about-images img {
+  width: 220px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.about-images img:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile-friendly layout */
+@media (max-width: 900px) {
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-images img {
+    width: 70%;
+  }
+}
+.about-image figure {
+  text-align: center;
+  margin: 0;
+}
+
+.about-image figcaption {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 8px;
+  font-style: italic;
+}
 .about-container {
   display: flex;
   align-items: flex-start;
@@ -501,6 +623,7 @@ form button:hover {
   flex-wrap: wrap;
 }
 
+/* Left column with stacked images */
 .about-images-column {
   display: flex;
   flex-direction: column;
@@ -514,36 +637,15 @@ form button:hover {
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.about-image figure {
-  text-align: center;
-  margin: 0;
-}
-
-.about-image figcaption {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 8px;
-  font-style: italic;
-}
-
+/* Right column text */
 .about-text {
   flex: 1;
   max-width: 600px;
-  background-color: white;
-  border-radius: 8px;
-  padding: 20px 30px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .about-text p {
   line-height: 1.6;
   margin-bottom: 1rem;
-}
-
-.about-text h2 {
-  text-align: center;
-  color: #2c3e50;
-  margin-bottom: 15px;
 }
 
 .involvement-bubble {
@@ -552,23 +654,5 @@ form button:hover {
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   margin-top: 2rem;
-}
-
-/* Responsive layout */
-@media (max-width: 900px) {
-  .about-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .about-images-column {
-    max-width: 80%;
-  }
-
-  .about-text {
-    max-width: 90%;
-    text-align: left;
-  }
 }
 
