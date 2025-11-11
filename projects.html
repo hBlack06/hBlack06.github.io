@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holly Black – Projects & Competitions</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/52341f41c6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- ===============================
+       HEADER + NAVIGATION
+  =============================== -->
+  <header>
+    <a href="index.html">
+      <img src="images/HollyBlackLogo.png" alt="Holly Black Logo" />
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="impossible.html">Impossible List</a></li>
+        <li><a href="classes.html">Classes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===============================
+       MAIN CONTENT
+  =============================== -->
+  <main>
+    <h1>Projects & Competitions</h1>
+
+    <section class="projects-section">
+      <p>Here you can explore my personal projects, academic work, and cybersecurity competition results. I regularly compete in events that challenge my technical and problem-solving abilities.</p>
+
+      <!-- ===============================
+           NCL SCORE REPORT SECTION
+      =============================== -->
+      <div class="project-card">
+        <h2><i class="fa-solid fa-shield-halved"></i> National Cyber League – Fall 2024</h2>
+        <p><strong>Event:</strong> NCL Fall 2024 Team Game<br>
+           <strong>Team:</strong> PantherSec<br>
+           <strong>National Rank:</strong> 55th out of 4,893 teams<br>
+           <strong>Percentile:</strong> 99th<br>
+           <strong>Score:</strong> 2,665 / 3,100</p>
+
+        <p>I competed in the National Cyber League (NCL) Fall 2024 Team Game, where my team earned a top 1% national ranking. This competition involved challenges in network traffic analysis, forensics, password cracking, cryptography, and web exploitation — all aligned with NIST NICE cybersecurity workforce categories.</p>
+
+        <div class="pdf-preview">
+          <iframe src="Holly Black - Cyber Skyline Report (1).pdf" width="100%" height="600px"></iframe>
+        </div>
+
+        <a href="https://cyberskyline.com/report/03QUEQFPVX6D" target="_blank" class="btn">
+          <i class="fa-solid fa-square-arrow-up-right"></i> View Full Verified Report
+        </a>
+      </div>
+
+      <!-- ===============================
+           Placeholder for Future Projects
+      =============================== -->
+      <div class="project-card">
+        <h2><i class="fa-solid fa-laptop-code"></i> Future Projects Coming Soon</h2>
+        <p>I’ll be adding more of my cybersecurity, programming, and research projects here in the near future.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===============================
+       FOOTER PLACEHOLDER
+  =============================== -->
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      })
+      .catch(err => console.error("Error loading footer:", err));
+  </script>
+</body>
+</html>
+
