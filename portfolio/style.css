@@ -571,4 +571,16 @@ form button:hover {
     text-align: left;
   }
 }
+.project-card ul {
+  list-style-type: disc;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding-left: 40px;
+  color: #1b1b1b;
+}
+
+.project-card li {
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
 
