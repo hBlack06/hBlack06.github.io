@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Holly Black – Home</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome Kit -->
+  <script src="https://kit.fontawesome.com/52341f41c6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- ===============================
+       HEADER + NAVIGATION
+  =============================== -->
+  <header>
+    <a href="index.html" class="logo-link">
+      <img src="Images/HollyBlackLogo.png" alt="Holly Black Logo" />
+    </a>
+
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="classes.html">Classes</a></li>
+        <li><a href="impossible.html">Impossible List</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===============================
+       MAIN CONTENT
+  =============================== -->
+  <main>
+    <h1>Welcome to My Portfolio</h1>
+
+    <!-- Centered Headshot -->
+    <div class="profile-image">
+      <img src="Images/CirlcleHeadshot.png" alt="Holly Black Headshot" />
+    </div>
+
+    <section>
+      <p>
+        Hello! I'm Holly Black, a Cybersecurity major at High Point University (Class of 2025).
+        I’m passionate about technology, teamwork, and innovation — with hands-on experience in programming,
+        cybersecurity competitions, and leadership roles.
+      </p>
+
+      <p>Explore my site to learn more about my projects, classes, resume, and how to get in touch.</p>
+    </section>
+  </main>
+
+  <!-- ===============================
+       FOOTER PLACEHOLDER
+  =============================== -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Load external footer -->
+  <script>
+    fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("footer-placeholder").innerHTML = data;
+      })
+      .catch(err => console.error("Error loading footer:", err));
+
+    // Mobile nav toggle
+    function initHamburger() {
+      const hamburger = document.querySelector(".hamburger");
+      const navList = document.querySelector("nav ul");
+
+      if (!hamburger || !navList) return;
+
+      hamburger.addEventListener("click", () => {
+        const isOpen = navList.classList.toggle("open");
+        hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+      });
+    }
+
+    document.addEventListener("DOMContentLoaded", initHamburger);
+  </script>
+</body>
+</html>
+
